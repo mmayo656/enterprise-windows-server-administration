@@ -1,4 +1,4 @@
-This project simulates a real-world enterprise IT environment using Windows Server, Active Directory, and centralized management tools.
+This project simulates a real-world enterprise IT environment and reflects hands-on system administration experience developed alongside professional healthcare IT exposure.
 
 Windows Server Administration Lab Portfolio 
 
