@@ -396,7 +396,31 @@ Endpoint security (BitLocker)
 
 System monitoring and troubleshooting  
 
- 
+## Screenshots
+
+### Active Directory Structure
+![Active Directory Structure](screenshots/ad-structure.png)
+
+### DNS Configuration
+![DNS Configuration](screenshots/dns-config.png)
+
+### DHCP Scope
+![DHCP Scope](screenshots/dhcp-scope.png)
+
+### Group Policy Settings
+![Group Policy Settings](screenshots/gpo-settings.png)
+
+### Drive Mapping
+![Drive Mapping](screenshots/drive-mapping.png)
+
+### BitLocker Configuration
+![BitLocker Configuration](screenshots/bitlocker.png)
+
+### RAID Volume
+![RAID Volume](screenshots/raid-volume.png)
+
+### PowerShell Output
+![PowerShell Output](screenshots/powershell-output.png)
 
 Conclusion 
 
