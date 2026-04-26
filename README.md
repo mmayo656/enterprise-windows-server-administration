@@ -1,402 +1,47 @@
-This project simulates a real-world enterprise IT environment and reflects hands-on system administration experience developed alongside professional healthcare IT exposure.
+# Windows Server Administration Portfolio
 
-Windows Server Administration Lab Portfolio 
+This repository demonstrates hands-on Windows Server administration skills using a virtualized enterprise-style lab environment.
 
-Author 
+The project focuses on practical IT tasks used in help desk, IT support, desktop support, junior system administration, and healthcare IT roles, including Active Directory, DNS, DHCP, Group Policy, file sharing, BitLocker, disk management, PowerShell, and troubleshooting.
 
-Michael Mayo 
+---
 
- 
+## Career Goal
 
-Overview 
+I am transitioning from healthcare and patient care into IT, system administration, cybersecurity, and healthcare IT support. This project is part of my hands-on portfolio showing practical Windows administration ability beyond classroom theory.
 
-This portfolio documents hands-on experience building, configuring, and managing a Windows-based enterprise environment. The lab environment simulates a small business network using Windows Server, Active Directory, Group Policy, file services, and PowerShell automation. 
+---
 
-The implementation includes domain controller deployment, DNS and DHCP configuration, user and group management, file sharing, security hardening, disk management, RAID configuration, and automation using PowerShell scripting. 
+## Key Skills Demonstrated
 
-These labs demonstrate practical system administration skills relevant to help desk, system administrator, and IT support roles. 
+- Windows Server administration
+- Active Directory domain deployment
+- User, group, and OU management
+- Group Policy configuration
+- DNS and DHCP administration
+- File sharing and NTFS permissions
+- BitLocker endpoint security
+- Disk partitioning and RAID configuration
+- PowerShell administration and automation
+- Event Viewer and system troubleshooting
+- Windows 11 client domain integration
 
- 
+---
 
-Environment 
+## Environment
 
-Hypervisor: Proxmox  
+- Proxmox virtualization platform
+- Windows Server 2025
+- Windows 11 client virtual machines
+- pfSense virtual router
+- Active Directory domain: `cit271.com`
+- Domain controller: `DCSERV1`
 
-Server OS: Windows Server 2025  
+---
 
-Client OS: Windows 11  
+## Project Evidence
 
-Domain: cit271.com  
-
-Network: pfSense virtual router  
-
-Tools:  
-
-Active Directory Users and Computers  
-
-Group Policy Management  
-
-DNS Manager  
-
-DHCP Manager  
-
-PowerShell  
-
-File Server Resource Manager  
-
-Disk Management  
-
- 
-
-Domain Controller Deployment 
-
-A Windows Server instance was configured as a domain controller to provide centralized authentication and management. 
-
-Key Tasks 
-
-Assigned static IP configuration:  
-
-IP Address: 192.168.1.2  
-
-Subnet Mask: 255.255.255.0  
-
-Gateway: 192.168.1.1  
-
-Renamed server to DCSERV1  
-
-Installed roles:  
-
-Active Directory Domain Services  
-
-DNS Server  
-
-DHCP Server  
-
-Promoted server to domain controller  
-
-Created domain: cit271.com  
-
-Skills Demonstrated 
-
-Windows Server deployment  
-
-Active Directory installation  
-
-Network configuration  
-
-Server role management  
-
- 
-
-DNS and DHCP Configuration 
-
-DNS 
-
-Created reverse lookup zone for 192.168.1.0/24  
-
-Enabled DNS scavenging to remove stale records  
-
-Configured aging for forward and reverse lookup zones  
-
-DHCP 
-
-Authorized DHCP server in Active Directory  
-
-Created scope:  
-
-Range: 192.168.1.20 – 192.168.1.250  
-
-Configured default gateway  
-
-Verified IP assignment and DNS functionality  
-
-Skills Demonstrated 
-
-DNS configuration and maintenance  
-
-DHCP scope design  
-
-Network troubleshooting  
-
- 
-
-Domain Management and Active Directory 
-
-A structured domain environment was created to simulate departmental organization. 
-
-Organizational Structure 
-
-Departments OU  
-
-IT  
-
-HR  
-
-Sales  
-
-Groups OU  
-
-Group Creation 
-
-IT Users  
-
-HR Users  
-
-HR Computers  
-
-Sales Users  
-
-Sales Computers  
-
-User Management 
-
-Created multiple users and assigned: 
-
-Organizational Units  
-
-Group memberships  
-
-Role-based access  
-
-Client Integration 
-
-Joined Windows 11 clients to domain  
-
-Verified domain authentication  
-
-Configured DNS settings for domain connectivity  
-
-Skills Demonstrated 
-
-Active Directory administration  
-
-OU design  
-
-Identity and access management  
-
- 
-
-Group Policy Configuration 
-
-Group Policy was used to enforce security settings and manage user environments. 
-
-Implemented Policies 
-
-Enforced CTRL+ALT+DEL login requirement  
-
-Configured loopback processing (Replace mode)  
-
-Applied security filtering to target specific users and computers  
-
-Deployed mapped drives based on user role  
-
-Drive Mapping Example 
-
-IT Users mapped to:  
-
- 
-
-Skills Demonstrated 
-
-Group Policy design and deployment  
-
-Access control enforcement  
-
-User environment management  
-
- 
-
-File Sharing and Storage Management 
-
-File sharing was configured using NTFS permissions, SMB shares, and Group Policy deployment. 
-
-File Server Setup 
-
-Created directory structure:  
-
-C:\File_Shares\HR_Share\Reports  
-
-Configured SMB share for HR department  
-
-Applied permissions:  
-
-HR Users: Read access  
-
-HR Reports Users: Modify access  
-
-Group Policy Deployment 
-
-Mapped HR share:  
-
- 
-
-File Server Resource Manager 
-
-Installed FSRM role  
-
-Configured quota:  
-
-2GB limit on HR share  
-
-Skills Demonstrated 
-
-File server administration  
-
-NTFS and share permissions  
-
-Storage management and quotas  
-
- 
-
-Security Configuration 
-
-Security controls were implemented using BitLocker and Group Policy. 
-
-BitLocker 
-
-Enabled full disk encryption  
-
-Configured:  
-
-Startup PIN  
-
-Enhanced PIN support  
-
-Recovery key generation  
-
-Access Restrictions 
-
-Denied login access to non-IT groups on domain controllers  
-
-Configured login warning message  
-
-Skills Demonstrated 
-
-Endpoint security  
-
-Access control policies  
-
-Data protection  
-
- 
-
-Disk Management and RAID 
-
-Storage configuration was performed using Disk Management and PowerShell. 
-
-Partitioning 
-
-Shrunk system partition  
-
-Created additional volumes using:  
-
-Disk Management GUI  
-
-PowerShell commands  
-
-RAID Configuration 
-
-Configured RAID 1 (mirroring)  
-
-Created redundant storage volume  
-
-Skills Demonstrated 
-
-Disk management  
-
-RAID configuration  
-
-PowerShell storage automation  
-
- 
-
-PowerShell Administration and Automation 
-
-PowerShell was used extensively for automation and administrative tasks. 
-
-Tasks Performed 
-
-Created OUs, users, and groups via PowerShell  
-
-Generated system reports (services export to CSV)  
-
-Automated file and directory creation  
-
-Script Development 
-
-Developed a PowerShell script to: 
-
-Create new departments dynamically  
-
-Generate associated groups  
-
-Create users interactively  
-
-Assign users to groups  
-
-Skills Demonstrated 
-
-PowerShell scripting  
-
-Automation  
-
-Active Directory scripting  
-
- 
-
-System Monitoring and Troubleshooting 
-
-Tools Used 
-
-Task Manager  
-
-Command Prompt  
-
-Event Viewer  
-
-Tasks 
-
-Monitored system performance  
-
-Diagnosed application issues  
-
-Verified connectivity using:  
-
-ping  
-
-DNS resolution tests  
-
-Skills Demonstrated 
-
-System monitoring  
-
-Troubleshooting  
-
-Performance analysis  
-
- 
-
-Key Skills Summary 
-
-Active Directory administration  
-
-Windows Server configuration  
-
-DNS and DHCP management  
-
-Group Policy design and enforcement  
-
-File sharing and permissions  
-
-PowerShell scripting and automation  
-
-Disk management and RAID  
-
-Endpoint security (BitLocker)  
-
-System monitoring and troubleshooting  
-
-## Screenshots
+The following screenshots show real configuration work performed in the lab environment.
 
 ### Active Directory Structure
 ![Active Directory Structure](screenshots/ad-structure.png)
@@ -422,8 +67,254 @@ System monitoring and troubleshooting
 ### PowerShell Output
 ![PowerShell Output](screenshots/powershell-output.png)
 
-Conclusion 
+---
 
-This lab environment provided hands-on experience with core system administration tasks in a Windows enterprise environment. The implementation demonstrates the ability to deploy, configure, secure, and manage networked systems using industry-standard tools and practices. 
+## Project Sections
 
- 
+### 1. Domain Controller Deployment
+
+Built a Windows Server domain controller to provide centralized authentication and management.
+
+Tasks completed:
+
+- Assigned static IPv4 settings
+- Renamed the server to `DCSERV1`
+- Installed Active Directory Domain Services
+- Installed DNS Server role
+- Installed DHCP Server role
+- Promoted the server to a domain controller
+- Created the domain `cit271.com`
+
+Skills shown:
+
+- Windows Server deployment
+- Domain controller configuration
+- Server role installation
+- Enterprise identity foundation setup
+
+---
+
+### 2. DNS and DHCP Configuration
+
+Configured core network services required for domain functionality.
+
+Tasks completed:
+
+- Created DNS reverse lookup zone
+- Enabled DNS scavenging
+- Authorized DHCP server in Active Directory
+- Created DHCP scope
+- Configured gateway and addressing options
+- Verified network connectivity and name resolution
+
+Skills shown:
+
+- DNS administration
+- DHCP scope configuration
+- Network service troubleshooting
+- Domain network support
+
+---
+
+### 3. Active Directory User and Group Management
+
+Built an organized Active Directory structure for users, computers, departments, and security groups.
+
+Tasks completed:
+
+- Created department OUs
+- Created security groups
+- Created domain users
+- Added users to correct groups
+- Joined Windows 11 clients to the domain
+- Moved client computers into correct OUs
+
+Skills shown:
+
+- Active Directory administration
+- Identity and access management
+- OU design
+- Group-based access control
+- Client domain integration
+
+---
+
+### 4. Group Policy Management
+
+Configured Group Policy Objects to manage security settings and user environments.
+
+Tasks completed:
+
+- Enforced Ctrl+Alt+Del login requirement
+- Configured security filtering
+- Configured loopback processing
+- Deployed mapped drives
+- Applied policies to specific users and computers
+
+Skills shown:
+
+- GPO creation and linking
+- Policy troubleshooting
+- Security filtering
+- User environment management
+- Enterprise desktop administration
+
+---
+
+### 5. File Sharing and Permissions
+
+Configured department-based file sharing using SMB, NTFS permissions, and Group Policy drive mapping.
+
+Tasks completed:
+
+- Created shared folders
+- Configured SMB shares
+- Applied NTFS permissions
+- Created department-based access groups
+- Mapped shared drives through Group Policy
+- Tested user access from Windows 11 clients
+
+Skills shown:
+
+- File server administration
+- Share permissions
+- NTFS permissions
+- Department-based access control
+- End-user support scenarios
+
+---
+
+### 6. BitLocker and Security Configuration
+
+Configured endpoint security and domain controller access restrictions.
+
+Tasks completed:
+
+- Enabled BitLocker drive encryption
+- Configured startup PIN support
+- Generated recovery key
+- Restricted local logon access to domain controllers
+- Configured interactive logon warning message
+
+Skills shown:
+
+- Endpoint security
+- Data protection
+- Access restriction policy
+- Security baseline configuration
+
+---
+
+### 7. Disk Management and RAID
+
+Configured Windows storage using Disk Management and PowerShell.
+
+Tasks completed:
+
+- Shrunk existing partitions
+- Created new NTFS volumes
+- Assigned drive letters
+- Configured RAID 1 mirrored volume
+- Verified disk configuration
+
+Skills shown:
+
+- Windows disk administration
+- Partition management
+- RAID configuration
+- Storage redundancy awareness
+
+---
+
+### 8. PowerShell Administration and Automation
+
+Used PowerShell to automate administrative tasks in Active Directory and Windows.
+
+Tasks completed:
+
+- Created OUs with PowerShell
+- Created users and groups
+- Created files and directories
+- Exported service information to CSV
+- Built a script to create departments, groups, and users
+
+Skills shown:
+
+- PowerShell scripting
+- Automation
+- Active Directory administration
+- System reporting
+
+---
+
+### 9. Monitoring and Troubleshooting
+
+Used Windows tools to verify system behavior and troubleshoot issues.
+
+Tools used:
+
+- Event Viewer
+- Task Manager
+- Command Prompt
+- PowerShell
+- `gpupdate`
+- `gpresult`
+- `ping`
+- `ipconfig`
+
+Skills shown:
+
+- Login troubleshooting
+- Policy verification
+- Connectivity testing
+- System performance review
+- End-user support troubleshooting
+
+---
+
+## Real-World Application
+
+This project shows practical Windows administration skills used in entry-level IT and system administration work:
+
+- Creating and managing domain users
+- Troubleshooting domain login issues
+- Applying Group Policy settings
+- Mapping department drives
+- Managing file permissions
+- Supporting Windows clients
+- Configuring DNS and DHCP
+- Securing endpoints with BitLocker
+- Using PowerShell for administration
+
+---
+
+## Resume Relevance
+
+This project supports my transition from healthcare and patient care into IT by showing practical Windows Server administration skills alongside my existing healthcare technology background, PACS troubleshooting experience, Linux administration portfolio, and cybersecurity education.
+
+---
+
+## Career Relevance
+
+This portfolio is relevant to roles such as:
+
+- Help Desk Technician
+- IT Support Specialist
+- Desktop Support Technician
+- Junior System Administrator
+- Active Directory Support Technician
+- Healthcare IT Support Specialist
+- PACS Support Analyst
+- Cybersecurity Support Technician
+
+---
+
+## Next Improvements
+
+Planned future improvements include:
+
+- Adding more PowerShell automation
+- Adding more Event Viewer troubleshooting examples
+- Expanding Active Directory security auditing
+- Adding a networking-focused pfSense section
+- Linking this project with Linux administration portfolio work
